@@ -14,7 +14,7 @@ climaForm.addEventListener('submit', (e) => {
     messageOne.textContent ='Carregando...'
     messagetwo.textContent =''
 
-    fetch('http://localhost:3000/clima?address=' + location).then((response)=>{
+    fetch('/clima?address=' + location).then((response)=>{
     response.json().then((data) => {
         if (data.error) {
             messageOne.textContent = data.error
