@@ -9,7 +9,7 @@ const forecast = (latitude, longitude, callback)=>{
         } else if (body.error){
             callback('Cadê tu istepó, assim fica foda de te achar po', undefined)
         } else{
-            callback(undefined, body.daily.data[0].summary + ' No momento são ' + body.currently.temperature + ' graus. Temos uma chance de ' + body.currently.precipProbability + '% de chuva.')
+            callback(undefined, body.daily.data[0].summary + ' No momento são ' + body.currently.temperature + ' graus. A máxima de hoje é ' + body.daily.data[0].temperatureHigh + ' com a mínima de '+ body.daily.data[0].temperatureLow + '. Temos uma chance de ' + body.currently.precipProbability + '% de chuva.')
         }
     })
 
